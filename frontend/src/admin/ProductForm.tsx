@@ -109,7 +109,7 @@ export default function AdminProductForm({
         ? (await adminApi.put<Product>(`/api/admin/products/${product.id}`, payload)).data
         : (await adminApi.post<Product>('/api/admin/products', payload)).data
 
-      const upload = async <T>(endpoint: string, file: File) => {
+      const upload = async <T,>(endpoint: string, file: File) => {
         const fd = new FormData()
         fd.append('file', file)
         return (await adminApi.post<T>(`/api/admin/products/${saved.id}/${endpoint}`, fd)).data
