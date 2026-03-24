@@ -9,4 +9,5 @@ data/
 *.png
 *.gif
 *.glb
+!frontend/public/**/*.glb
 backend/public/
